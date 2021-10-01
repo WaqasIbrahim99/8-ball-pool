@@ -29,7 +29,8 @@ class _magic8ballState extends State<magic8ball> {
     return Column(mainAxisAlignment: MainAxisAlignment.center,
       children: [Center(child: FlatButton(onPressed: () {
         setState(() {
-         
+         ballNumber=Random().nextInt(5)+1;
+          print("button is pressed: $ballNumber");
         });
       }, child: Image.asset('images/ball$ballNumber.png'),),),
       ],);
